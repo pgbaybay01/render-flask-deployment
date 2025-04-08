@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Messages - My Flask Website{% endblock %}
+
+{% block content %}
+<section>
+    <h1>Messages</h1>
+    
+    {% if messages %}
+        <div>
+            {% for message in messages %}
+                <div>
+                    <h3>{{ message.name }}</h3>
+                    <p><strong>Email:</strong> {{ message.email }}</p>
+                    <p><strong>Message:</strong> {{ message.message }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No messages yet.</p>
+    {% endif %}
+</section>
+{% endblock %}

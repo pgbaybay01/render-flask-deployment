@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Home - My Flask Website{% endblock %}
+
+{% block content %}
+<section>
+    <h1>Welcome to My Flask Website</h1>
+    <p>This is a simple Flask website created for demonstration purposes.</p>
+    <a href="{{ url_for('contact') }}">Contact Us</a>
+</section>
+
+<section>
+    <div>
+        <h2>Easy to Use</h2>
+        <p>Our website is designed with simplicity in mind.</p>
+    </div>
+    <div>
+        <h2>Responsive</h2>
+        <p>Looks great on both desktop and mobile devices.</p>
+    </div>
+    <div>
+        <h2>Flask Powered</h2>
+        <p>Built using the Flask framework for Python.</p>
+    </div>
+</section>
+{% endblock %}
